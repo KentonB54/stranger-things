@@ -18,6 +18,7 @@ flex-direction: column;
 .middleContainer {
     display: flex;
     flex: 1;
+    
 }
 
     .content {
@@ -76,6 +77,7 @@ flex-direction: column;
   margin-top: 5px;
   max-width: 50rem;
   margin-left: 10px;
+  
 }
 
 #searchButton {
@@ -93,4 +95,18 @@ flex-direction: column;
 
 #title {
     margin-left: 15px;
+}
+
+.contentContainer {
+    overflow: auto;
+    max-width: 800px;
+    font-size: 12px;
+    max-height: 600px;
+    text-align: center;
+    margin: auto;
+}
+
+.contentContainer p {
+    margin-right: 150px;
+    margin-left: 150px;
 }
