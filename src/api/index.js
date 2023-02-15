@@ -1,13 +1,8 @@
 import config from '../config'
+import React, { useState, useEffect } from 'react';
 
-export const GetAllPosts = () => {
-    fetch(`${config.apiLink}/${config.cohort}/posts`, {
-        method: 'Get',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ })
-    })
+export const GetAllPosts = async () => {
+
 }
 
 export const GetPost = (id) => {
