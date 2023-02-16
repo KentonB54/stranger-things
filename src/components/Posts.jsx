@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+
+import {getAllPosts} from '../api'
 
 const Posts = (props) => {
-    const {posts,} = props;
+    const [posts, setPosts] = useState([]);
+  
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const {data} = await getAllPosts()
+      setPosts(data.posts)
+  }
+  
+    fetchPosts();
+  }, [])
 
     return (
     <div className="contentContainer">
-        {
+       {
         posts.map(post => (
             <div key={post.id}>
                 <h3>{post.title}</h3>
